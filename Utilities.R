@@ -25,6 +25,7 @@ na_values <- function(data){
 ## --------------------------------------------------------------------------------------------------
 
 # function to scale data
+# data should not contain missing values
 # method = 'standardized' for standardization of data using mean and standard deviation
 # method = 'normalized' for normalization of data using minimum and maximum values
 # param_data = data whose parameters will be used for scaling
