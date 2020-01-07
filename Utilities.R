@@ -18,7 +18,7 @@ na_values <- function(data){
   
   # create data frame containing variable names, NA value count and proportion
   # save the data frame to global environment
-  na_vals <<- data.frame(variable = colnames(na_vals), na_vals = t(na_vals), 
+  na_vals <<- data.frame(variable = colnames(na_vals), na_val = t(na_vals), 
                          prop_na = t(100*na_vals/nrow(data)), row.names = NULL)
 }
 
