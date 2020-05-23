@@ -28,18 +28,18 @@ na_values <- function(data){
 
 # function to scale data
 # data should not contain missing values
-# method = 'standardized' for standardization of data using mean and standard deviation
-# method = 'normalized' for normalization of data using minimum and maximum values
+# method = 'standardize' for standardization of data using mean and standard deviation
+# method = 'normalize' for normalization of data using minimum and maximum values
 # param_data = data whose parameters will be used for scaling
 # scale_data = data to be scaled
 scaling <- function(param_data, scale_data, method){
   # check for method
-  if(method == "standardized"){
+  if(method == "standardize"){
     # standardization using mean and standard deviation
     scaled_data <- data.frame(scale(scale_data,
                                     center = apply(param_data, 2, mean),
                                     scale = apply(param_data, 2, sd)))
-  }else if(method == "normalized"){
+  }else if(method == "normalize"){
     # normalization using min-max
     scaled_data <- data.frame(scale(scale_data,
                                     center = apply(param_data, 2, min),
